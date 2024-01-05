@@ -12,8 +12,8 @@ public class Main {
         }
         int max = 0;
         int i = 0;
-        int j = 0;
         while(i+2 < N) {
+            int j = 0;
             while(j+2 < N) {
                 int sumMax = 0;
                 for(int k = i; k < 3; k++) {

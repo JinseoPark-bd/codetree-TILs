@@ -14,8 +14,8 @@ public class Main {
         int i = 0;
         int j = 0;
         while(i+2 < N) {
-            int sumMax = 0; 
             while(j+2 < N) {
+                int sumMax = 0;
                 for(int k = i; k < 3; k++) {
                     for(int l = j; l < 3; l++) {
                         sumMax += arr[k][l];

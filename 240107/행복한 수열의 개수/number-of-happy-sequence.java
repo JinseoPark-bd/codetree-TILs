@@ -13,6 +13,11 @@ public class Main {
             }
         }
 
+        if(n == 1 && m == 1) {
+            System.out.println(2);
+            return;
+        }
+
         for(int i = 0; i < n; i++) {
             int s = 1;
             for(int j = 0; j < n-1; j++) {

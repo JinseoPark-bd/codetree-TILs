@@ -22,7 +22,7 @@ public class Main {
                     continue;
                 }
 
-                if(s == m) {
+                if(s >= m) {
                     answer++;
                     break;
                 }

@@ -19,7 +19,6 @@ public class Main {
                 if(arr[i][j] == arr[i][j+1]) s++;
                 else {
                     s = 1;
-                    continue;
                 }
 
                 if(s >= m) {
@@ -35,7 +34,6 @@ public class Main {
                 if(arr[j][i] == arr[j+1][i]) s++;
                 else {
                     s = 1;
-                    continue;
                 }
 
                 if(s >= m) {

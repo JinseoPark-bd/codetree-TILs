@@ -13,7 +13,7 @@ public class Main {
             }
         }
 
-        for(int i = 0; i < t%n; i++) {
+        for(int i = 0; i < t%(2*n); i++) {
             moveArr1();
         }
         

@@ -14,6 +14,7 @@ public class Main {
 
         if(answer == n){
             count++;
+            answer -= s;
             return;
         }
 
@@ -24,6 +25,7 @@ public class Main {
 
         for(int i = 1; i <= n; i++) {
             beautifulNum(i);
+            
         }
     }
 

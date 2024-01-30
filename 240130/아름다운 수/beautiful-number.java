@@ -8,6 +8,7 @@ public class Main {
     /**
     * 1이상 4이하의 수로만
     * 아름다운수 : 숫자가 숫자개수만큼 연달아 있는 경우
+    * n = 2  1+1
     **/
     public static void beautifulNum(int s) {
         answer += s;
@@ -25,7 +26,7 @@ public class Main {
 
         for(int i = 1; i <= n; i++) {
             beautifulNum(i);
-            
+            answer -= i;
         }
     }
 

@@ -1,39 +1,29 @@
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.*;
+import java.io.*;
 public class Main {
     public static int n;
     public static int count = 0;
-    public static ArrayList<Integer> list = new ArrayList<>();
-    public static int answer = 0;
-    /**
-    * 1이상 4이하의 수로만
-    * 아름다운수 : 숫자가 숫자개수만큼 연달아 있는 경우
-    * n = 2  1+1
-    **/
-    public static void beautifulNum(int s) {
-        answer += s;
+    public static int[] arr;
 
-        if(answer == n){
-            count++;
-            answer -= s;
-            return;
+    public static void beautifulNum(int num) {
+        if(num == n) count++;
+        else {
+            for(int i = 1; i <= 4; i++) {
+                if(num + i > n) return;
+                else {
+                    for(int j = 0; j < i; j++) {
+                        arr[num+j] = i;
+                    }
+                    beautifulNum(num+i);
+                }
+            }
         }
-
-        if(answer > n) {
-            answer -= s;
-            return;
-        }
-
-        for(int i = 1; i <= n; i++) {
-            beautifulNum(i);
-            answer -= i;
-        }
-        
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        n = Integer.parseInt(br.readLine());
+        arr = new int[n];
         beautifulNum(0);
         System.out.print(count);
     }

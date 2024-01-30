@@ -26,9 +26,9 @@ public class Main {
 
         for(int i = 1; i <= n; i++) {
             beautifulNum(i);
+            answer -= i;
         }
         
-        answer -= s;
     }
 
     public static void main(String[] args) {

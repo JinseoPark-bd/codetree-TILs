@@ -69,7 +69,7 @@ public class Main {
             st = new StringTokenizer(br.readLine());
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
-            push(x, y);
+            push(x-1, y-1);
             BFS();
         }
 

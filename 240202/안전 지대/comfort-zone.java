@@ -66,6 +66,7 @@ public class Main {
             maxVill = Math.max(maxVill, maxCnt);
             maxList.add(maxCnt);
         }
-        System.out.print(maxList.indexOf(maxVill)+" "+maxVill);
+        int MIN_K = maxList.indexOf(maxVill) == 0 ? 1 : maxList.indexOf(maxVill);
+        System.out.print(MIN_K+" "+maxVill);
     }
 }

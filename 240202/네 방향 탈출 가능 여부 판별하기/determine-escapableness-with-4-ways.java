@@ -30,14 +30,14 @@ public class Main {
     }
 
     public static void BFS() {
-        int[] dx = {1, 0};
-        int[] dy = {0, 1};
+        int[] dx = {1, 0, -1, 0};
+        int[] dy = {0, 1, 0 , -1};
 
         while(!q.isEmpty()) {
             Pair curr = q.poll();
             int x = curr.x, y = curr.y;
 
-            for(int i = 0; i < 2; i++) {
+            for(int i = 0; i < 4; i++) {
                 int newX = x + dx[i];
                 int newY = y + dy[i];
                 if(canGo(newX, newY)) {
@@ -62,7 +62,7 @@ public class Main {
         push(0,0);
         BFS();
 
-        if(visited[n-1][m-1] == 1) System.out.print(0);
-        else System.out.print(1);
+        if(visited[n-1][m-1] == 1) System.out.print(1);
+        else System.out.print(0);
     }
 }

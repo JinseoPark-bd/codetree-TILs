@@ -38,7 +38,7 @@ public class Main {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
         MAX_K = 0;
-        int MIN_K = 0;
+        ArrayList<Integer> list = new ArrayList<>();
         int maxVill = 0;
         for(int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
@@ -47,9 +47,13 @@ public class Main {
                 MAX_K = Math.max(MAX_K, map[i][j]);
             }
         }
-        
+
+        ArrayList<Integer> maxList = new ArrayList<>();
+        maxList.add(0);
+
         for(int k = 1; k <= MAX_K; k++) {
             int maxCnt = 0;
+            int minK = MAX_K;
             for(int i = 0; i < N; i++) {
                 for(int j = 0; j < M; j++) {
                     DFS(i,j,k);
@@ -60,10 +64,8 @@ public class Main {
                 }
             }
             maxVill = Math.max(maxVill, maxCnt);
-            if(maxVill == maxCnt) MIN_K = k;
+            maxList.add(maxCnt);
         }
-        
-        System.out.print(MIN_K+" "+maxVill);
-        
+        System.out.print(maxList.indexOf(maxVill)+" "+maxVill);
     }
 }

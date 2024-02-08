@@ -7,7 +7,7 @@ public class Main {
     Tabulation : 아래에서 값을 채워 나가기 때문에 바텀업 방식 (Bottom-Up Approach) 라고 부릅니다. 바텀업 방식이 약간 더 빠릅니다.
     **/
     public static int N;
-    public static final int MAX_N = 45;
+    public static final int MAX_N = 46;
     public static int[] dp = new int[MAX_N];
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class Main {
         dp[1] = 1;
         dp[2] = 1;
         for(int i = 3; i <= N; i++) {
-            dp[i] = dp[i-1] + dp[i-2];
+            dp[i] = dp[i-2] + dp[i-1];
         }
         System.out.print(dp[N]);
     }
